@@ -1,0 +1,33 @@
+getgenv().china = {
+    Enabled = true, -- Enable or disable the aim assist
+    Keybind = "E", -- Customizable keybind for toggling aim assist
+    AimSensitivity = 0.5, -- Control the sensitivity of the aim adjustment
+    AimPart = "Head", -- Default part to aim at (can be changed to "Torso", "Legs", etc.)
+    Prediction = true, -- Enable prediction for moving targets
+    PredictionValue = 0.165, -- Adjust prediction accuracy based on the target's velocity
+    Smoothness = 0.2, -- Control how smooth the aim transition is
+    MaxDistance = 500, -- Maximum distance for aim assist to activate
+    FOV = 5, -- Field of view for the aim assist (can be visualized with a circle)
+    Priority = {"Head", "Torso"}, -- Priority parts to aim at
+    Whitelist = {}, -- List of players to ignore by username
+    IgnoreFriends = true, -- Option to ignore aiming at friends
+    UseMousePosition = false, -- Option to use mouse position for aiming
+    
+    -- Streamproof settings
+    Streamproof = {
+        RandomizedAimOffset = true, -- Adds a slight random offset to the aim for legitimacy
+        HumanizedMovement = true, -- Adds natural movement patterns
+        Jitter = true, -- Introduce slight jitter in aiming to simulate human inaccuracy
+        AdaptiveSmoothing = true, -- Adjust smoothing dynamically based on player movement
+        NaturalTargetSwitch = true, -- Adds natural delays and patterns when switching targets
+    },
+    
+    -- Focus settings
+    Focus = {
+        Enabled = true, -- Enable or disable the focus feature
+        FocusRadius = 50, -- Radius around the mouse to detect player aiming attempts
+        ActivationThreshold = 0.7, -- Confidence threshold for aim assist activation
+    }
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/T0xicJacob/china/main/Loader.txt"))()
